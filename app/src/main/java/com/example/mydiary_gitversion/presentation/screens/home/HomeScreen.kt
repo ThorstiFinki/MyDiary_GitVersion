@@ -1,6 +1,7 @@
 package com.example.mydiary_gitversion.presentation.screens.home
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -29,6 +30,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.mydiary_gitversion.R
 
+@ExperimentalFoundationApi
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @ExperimentalMaterial3Api
 @Composable
@@ -54,7 +56,9 @@ fun HomeScreen(
                     )
                 }
             },
-            content = {}
+            content = {
+                HomeContent(diaryNotes = mapOf() , onClick = {})
+            }
         )
 
     }
